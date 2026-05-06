@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add & Remove Cart</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+    }
+
+    .products {
+      display: flex;
+      gap: 20px;
+    }
+
+    .card {
+      border: 1px solid #ccc;
+      padding: 10px;
+      width: 150px;
+      text-align: center;
+    }
+
+    button {
+      background: orange;
+      border: none;
+      padding: 8px;
+      cursor: pointer;
+      margin-top: 5px;
+    }
+
+    .remove-btn {
+      background: red;
+      color: white;
+      margin-left: 10px;
+    }
+
+    #cart {
+      margin-top: 20px;
+      border-top: 2px solid black;
+      padding-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h2>🛒 Products</h2>
+
+<div class="products">
+  <div class="card">
+    <h4>Product 1</h4>
+    <p>₹100</p>
+    <button onclick="addToCart('Product 1', 100)">Add</button>
+  </div>
+
+  <div class="card">
+    <h4>Product 2</h4>
+    <p>₹200</p>
+    <button onclick="addToCart('Product 2', 200)">Add</button>
+  </div>
+
+  <div class="card">
+    <h4>Product 3</h4>
+    <p>₹300</p>
+    <button onclick="addToCart('Product 3', 300)">Add</button>
+  </div>
+</div>
+
+<h3>Items in Cart: <span id="count">0</span></h3>
+<h3>Total Price: ₹<span id="total">0</span></h3>
+
+<div id="cart">
+  <h3>Cart Items</h3>
+  <ul id="cartItems"></ul>
+</div>
+
+<script>
+  let cart = [];
+
+  function addToCart(name, price) {
+    cart.push({ name, price });
+    updateCart();
+  }
+
+  function removeItem(index) {
+    cart.splice(index, 1);
+    updateCart();
+  }
+
+  function updateCart() {
+    let cartList = document.getElementById("cartItems");
+    let count = document.getElementById("count");
+    let total = document.getElementById("total");
+
+    cartList.innerHTML = "";
+    let totalPrice = 0;
+
+    cart.forEach((item, index) => {
+      totalPrice += item.price;
+
+      let li = document.createElement("li");
+      li.innerHTML = `
+        ${item.name} - ₹${item.price}
+        <button class="remove-btn" onclick="removeItem(${index})">Remove</button>
+      `;
+      cartList.appendChild(li);
+    });
+
+    count.innerText = cart.length;
+    total.innerText = totalPrice;
+  }
+</script>
+
+</body>
+</html>

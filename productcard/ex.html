@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    < title>Product Cards</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="product-card">
+        <img src="https://via.placeholder.com/250" alt="Product">
+        <h3>Smart Watch</h3>
+        <p>Fitness tracking smart watch.</p>
+        <span>₹2,999</span>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+        <img src="https://via.placeholder.com/250" alt="Product">
+        <h3>Headphones</h3>
+        <p>Noise cancelling headphones.</p>
+        <span>₹1,999</span>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+        <img src="https://via.placeholder.com/250" alt="Product">
+        <h3>Bluetooth Speaker</h3>
+        <p>Portable wireless speaker.</p>
+        <span>₹1,499</span>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+        <img src="https://via.placeholder.com/250" alt="Product">
+        <h3>Power Bank</h3>
+        <p>10000mAh fast charging.</p>
+        <span>₹1,299</span>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+        <img src="https://via.placeholder.com/250" alt="Product">
+        <h3>Wireless Mouse</h3>
+        <p>Ergonomic wireless mouse.</p>
+        <span>₹699</span>
+        <button>Add to Cart</button>
+    </div>
+</div>
+
+</body>
+</html>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    padding: 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background: #fff;
+    padding: 15px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.product-card h3 {
+    margin: 10px 0 5px;
+}
+
+.product-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+.product-card span {
+    display: block;
+    margin: 10px 0;
+    font-size: 18px;
+    color: #27ae60;
+    font-weight: bold;
+}
+
+.product-card button {
+    background: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.product-card button:hover {
+    background: #2980b9;
+}
+
+</style>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+       <tr><th>images</th><th id="name">name</th><th>s.no</th><th class="salary">salary</th><th>date of join</th></tr>
+       <tr><td></td><td  class="name">ram
+         <ul>
+        <img src="ram.jpg" alt="ram_image">
+        <li>name:ram</li>
+        <li>age:27</li>
+        <li>salary:23000</li>
+        <li>office_name: VN SOFT</li>
+        </ul>
+       </td><td>10001</td><td  class="salary" >20000</td><td>22-03-2025</td></tr>
+       <tr><td><img src="venkat.jpg.jfif" alt=""></td><td  class="name">venkat</td><td>10002</td><td  class="salary">20000</td><td>22-03-2025</td></tr>
+       <tr><td><img src="ntr.jpg" alt=""></td><td  class="name">gopal</td><td>10003</td><td  class="salary">20000</td><td>22-03-2025</td></tr>
+       <tr><td><img src="ram.jpg" alt=""></td><td  class="name">deepak</td><td>10004</td><td  class="salary">20000</td><td>22-03-2025</td></tr>
+       <tr><td><img src="nani.jpg" alt=""></td><td  class="name">siva</td><td>10005</td><td  class="salary">20000</td><td>22-03-2025</td></tr>
+    </table>
+</body>
+</html>
+<style>
+    table{
+        width: 100%;
+    }
+    tr{
+        text-align: center;
+    }
+    .salary{
+        color: green;
+        background-color: aqua;
+    }
+    .name{
+    color: rgb(247, 7, 7);
+    background-color: black;
+    padding: 20px;
+    }
+    #name{
+        background-color: yellow;
+        color: red;
+    }
+    img{
+         width: 100px;
+        height: 100px;
+        border-radius: 50%;   
+    }
+   ul{
+  display: none;
+  position:absolute;
+  background: #da1c1c;
+  color: whitesmoke;
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.name ul {
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.name:hover ul {
+    display: block;
+    opacity: 1;
+    text-decoration: none;
+}
+   
+
+
+</style>

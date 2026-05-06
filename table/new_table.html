@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Employee Table</title>
+
+<style>
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+tr{
+    text-align: center;
+}
+.salary{
+    color: green;
+    background-color: aqua;
+}
+.name{
+    position: relative;
+    color: rgb(247, 7, 7);
+    background-color: black;
+}
+#name{
+    background-color: yellow;
+    color: red;
+}
+img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.name ul{
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background: #da1c1c;
+    min-width: 150px;
+    padding: 10px;
+    list-style: none;
+}
+.name:hover ul{
+    display: block;
+}
+
+/* Search UI */
+.controls{
+    margin: 20px 0;
+}
+input, select{
+    padding: 8px;
+    margin-right: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Employee Management</h2>
+
+<div class="controls">
+    🔍 <input type="text" id="search" placeholder="Search by name">
+    
+    💰 <select id="salaryFilter">
+        <option value="">All Salaries</option>
+        <option value="20000">20000</option>
+        <option value="23000">23000</option>
+    </select>
+</div>
+
+<table border="1">
+<tr>
+    <th>Image</th>
+    <th id="name">Name</th>
+    <th>S.No</th>
+    <th class="salary">Salary</th>
+    <th>Date of Join</th>
+</tr>
+
+<tr>
+<td><img src="ram.jpg"></td>
+<td class="name">ram
+<ul>
+<li>age:27</li>
+<li>salary:23000</li>
+<li>office: VN SOFT</li>
+</ul>
+</td>
+<td>10001</td>
+<td class="salary">23000</td>
+<td>22-03-2025</td>
+</tr>
+
+<tr>
+<td><img src="venkat.jpg.jfif"></td>
+<td class="name">venkat</td>
+<td>10002</td>
+<td class="salary">20000</td>
+<td>22-03-2025</td>
+</tr>
+
+<tr>
+<td><img src="ntr.jpg"></td>
+<td class="name">gopal</td>
+<td>10003</td>
+<td class="salary">20000</td>
+<td>22-03-2025</td>
+</tr>
+
+<tr>
+<td><img src="ram.jpg"></td>
+<td class="name">deepak</td>
+<td>10004</td>
+<td class="salary">20000</td>
+<td>22-03-2025</td>
+</tr>
+
+<tr>
+<td><img src="nani.jpg"></td>
+<td class="name">siva</td>
+<td>10005</td>
+<td class="salary">20000</td>
+<td>22-03-2025</td>
+</tr>
+
+</table>
+
+<script>
+const searchInput = document.getElementById("search");
+const salaryFilter = document.getElementById("salaryFilter");
+const rows = document.querySelectorAll("table tr");
+
+// Filter function
+function filterTable() {
+    const searchValue = searchInput.value.toLowerCase();
+    const salaryValue = salaryFilter.value;
+
+    rows.forEach((row, index) => {
+        if(index === 0) return; // skip header
+
+        const name = row.querySelector(".name").innerText.toLowerCase();
+        const salary = row.querySelector(".salary").innerText;
+
+        const matchName = name.includes(searchValue);
+        const matchSalary = salaryValue === "" || salary === salaryValue;
+
+        if(matchName && matchSalary){
+            row.style.display = "";
+        } else {
+            row.style.display = "none";
+        }
+    });
+}
+
+// Events
+searchInput.addEventListener("keyup", filterTable);
+salaryFilter.addEventListener("change", filterTable);
+</script>
+
+</body>
+</html>

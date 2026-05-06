@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login & Signup Animation</title>
+  <link rel="stylesheet" href="sign_up1.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="form-box">
+    
+   
+    <form class="login">
+      <h2>Login</h2>
+      <input type="text" placeholder="Username" required>
+      <input type="password" placeholder="Password" required>
+      <button>Login</button>
+      <p>Don't have an account? 
+        <span onclick="Signup()">Signup</span>
+      </p>
+    </form>
+
+    
+    <form class="signup">
+      <h2>Signup</h2>
+      <input type="text" placeholder="Username" required>
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Password" required>
+      <input type="password" placeholder="Conform Password" required>
+      <button>Signup</button>
+      <p>Already have an account? 
+        <span onclick="Login()">Login</span>
+      </p>
+    </form>
+
+  </div>
+</div>
+
+
+</body>
+</html>
+<script>
+  function Signup() {
+    document.querySelector('.form-box').classList.add('active');
+  }
+  function Login() {
+    document.querySelector('.form-box').classList.remove('active');
+  }
+</script>

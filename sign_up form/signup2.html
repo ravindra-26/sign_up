@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+
+<div class="signup-div">
+    <h2>Sign Up</h2>
+    <form>
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter your name" required>
+
+        <label>Email</label>
+        <input type="email" placeholder="Enter your email" required>
+
+        <label>Password</label>
+        <input type="password" placeholder="Enter password" required>
+
+        <label>Confirm Password</label>
+        <input type="password" placeholder="Confirm password" required>
+
+        <button type="submit">Create Account</button>
+    </form>
+</div>
+
+</body>
+</html>
+<style>
+    label{
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    }
+   body{
+    background: linear-gradient(to right, #f87c82, #f59df0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+   }
+   div{
+    background: rgb(252, 115, 115);
+    padding: 50px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    
+   }
+   input{
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: #fe4f89;
+   }
+   button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    background: #4facfe;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+h2{
+    text-align: center;
+    text-decoration: underline;
+}
+button:hover{
+transform: translateZ(25px);
+background: #141e30;
+ transform: translateX(5px);
+}
+div:hover{
+   box-shadow: 0px 0px 20px rgb(250, 23, 174);
+  
+}
+input:hover{
+background: #141e30;
+transform: translateX(5px);
+transform: 0.03s;
+color: white;
+}
+</style>

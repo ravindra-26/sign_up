@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Gallery</title>
+ 
+</head>
+<body>
+
+  <h2>Image Gallery</h2>
+
+  <div class="gallery-container">
+    <div class="main-image">
+      <img id="preview" src="https://picsum.photos/id/1015/600/400" alt="">
+    </div>
+
+    <div class="thumbnails">
+      <img src="https://picsum.photos/id/1015/200/150" onclick="changeImage(this)">
+      <img src="https://picsum.photos/id/1016/200/150" onclick="changeImage(this)">
+      <img src="https://picsum.photos/id/1018/200/150" onclick="changeImage(this)">
+      <img src="https://picsum.photos/id/1020/200/150" onclick="changeImage(this)">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  text-align: center;
+}
+
+h2 {
+  margin-top: 20px;
+}
+
+.gallery-container {
+  width: 700px;
+  margin: auto;
+}
+
+.main-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.thumbnails {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.thumbnails img {
+  width: 22%;
+  cursor: pointer;
+  border-radius: 6px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.thumbnails img:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+</style>

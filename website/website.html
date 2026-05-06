@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+    <div>V N Softverg</div>
+        <nav>
+         <a href="#home">Home</a>
+         <a href="#about">About</a>
+         <a href="#services">Services</a>
+         <a href="#contacts">Contact</a>
+        </nav>
+
+    </header>
+    
+    <section  class="home" id="home">
+    <h1>V N SoftVerg Technology</h1>
+    <p>Innovative Software Solutions for Your Business</p>
+   <a href="#home"> <button>Get Started</button></a>
+</section>
+
+<section class="about" id="about">
+    <h1>About</h1>
+    <p>
+        V N SoftVerg Technology Private Limited is a growing IT company
+        providing high-quality software, web development, and digital solutions
+        to help businesses grow in the modern world.
+    </p>
+
+</section>
+<section class="services" id="services">
+    <h2>Our Services</h2>
+    <div class="service-box">
+        <div class="card">Web Development</div>
+        <div class="card">Software Development</div>
+        <div class="card">Mobile App Development</div>
+        <div class="card">Digital Marketing</div>
+    </div>
+</section>
+<section class="contacts" id="contacts" >
+   
+    <h1>Contact Us</h1>
+    <p>Email: info@vnsoftverg.com</p>
+    <p>Phone: +91 7995709151</p>
+    <p>Location: India</p>
+
+
+</section>
+<footer>
+    <p>&copy;© 2026 V N SoftVerg Technology Pvt Ltd. All Rights Reserved.</p>
+</footer>
+</body>
+</html>
+<style>
+    header{
+        background: rgb(0, 10, 20);
+        color: white;
+        padding:20px 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header nav a{
+        color: white;
+        padding-left: 30px;
+        text-decoration: none;
+    }
+    section {
+    padding: 40px 40px;
+    text-align: center;
+    
+    }
+    .home{
+         background-image: url(logo.jpeg);
+         background-size:cover;
+         color: white;
+         text-align: center;
+         padding: 100px 20px;
+    }
+    .services .service-box{
+       
+        font-weight: bolder;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 40px;
+        padding: 50px;
+       
+    }
+    .contacts{
+        padding: 40px 40px;
+        background-image: url(contact.jpg);
+        
+        background-repeat: no-repeat;
+        background-size:cover;
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+    }
+    .card{
+    box-shadow:  0px 5px  rgb(101, 102, 102);
+    background: whitesmoke;
+    padding: 50px;
+    border-radius: 8px;
+    font-weight: bold;
+     gap: 20px;
+    
+
+    }
+    .card:hover{
+       transform: translateY(-5px);
+       transform: 0.9s;
+       box-shadow: 0px 0px 15px pink;
+
+    }
+    footer{
+     background: linear-gradient(to right, #0a2540, #f55929);
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+nav a:hover{
+    background-color: #541502;
+}
+    
+</style>

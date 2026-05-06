@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <a href="">home</a>
+        <a href="#page1">page1</a>
+         <a href="#page2">page2</a>
+          <a href="#page3">page3</a>
+           <a href="#page4">page4</a>
+    </nav>
+    <div>
+        <div id="home"> welcome to my Home page</div>
+        <div id="page1" >pleace wait for 10sec </div>
+         <div id="page2">how can i help you</div>
+          <div id="page3">pleace wait for result</div>
+           <div id="page4">Thakyou  </div>
+    </div>
+        <button class="home-btn" onclick="goHome()">🏠 Home</button>
+</body>
+<script>
+    function goHome() {
+        document.getElementById("home").scrollIntoView({
+            behavior: "smooth"
+        });
+    }
+</script>
+</html>
+<style>
+    #home{
+       height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: rgb(230, 10, 10);
+        background-color: rgb(211, 246, 176);
+        text-align: center;
+        scroll-snap-align: start;
+        padding: 20px;
+        font-size: 100px;
+ 
+    }
+    #page1{
+       height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: rgb(230, 10, 10);
+        background-color: chartreuse;
+        text-align: center;
+        scroll-snap-align: start;
+        padding: 20px;
+        font-size: 100px;
+ 
+    }
+    #page2{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: rgb(230, 10, 10);
+        background-color: blueviolet;
+        text-align: center;
+        scroll-snap-align: start;
+        padding: 20px;
+        font-size: 100px;
+    }
+    #page3{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: rgb(230, 10, 10);
+        background-color: antiquewhite;
+        text-align: center;
+        scroll-snap-align: start;
+        padding: 20px;
+        font-size: 100px;
+    }
+    #page4{
+         height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: rgb(230, 10, 10);
+        background-color: blue;
+        text-align: center;
+        scroll-snap-align: start;
+        padding: 20px;
+        font-size: 100px;
+    }
+    nav{
+       
+        background-color: black;
+        color: white;
+        font-size: 50px;
+        padding: 20px 50px;
+    }
+    nav a{
+        margin: 0px 20px;
+        justify-content: center;
+        color: aliceblue;
+        text-decoration: none;
+    }
+    .home-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 18px;
+    font-size: 18px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.home-btn:hover {
+    background-color: red;
+}
+</style>

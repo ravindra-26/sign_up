@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login_page</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+           
+            <form class="login" >
+                 <h2>login</h2>
+            <input type="text" placeholder="Username" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="enter password" required>
+        
+             <button >login</button>
+             <p>do yuo have a account?
+             <span onclick="Signup()">signup</span>
+             </form>
+             </p>
+
+
+            <form class="signup" >
+                <h2>signup</h2>
+            <input type="text" placeholder="Username" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="enter password" required>
+            <input type="password" placeholder="enter confirm password" required>
+             
+             <button>signup</button>
+             <p>do yuo have a account?
+             <span  onclick="Login()">login</span>
+             </form>
+             </p>
+
+
+        </div>
+    </div>
+</body>
+ <script>
+     function Signup() {
+    document.querySelector('.box').classList.add('active');
+  }
+  function Login() {
+    document.querySelector('.box').classList.remove('active');
+  }
+
+ </script>
+</html>
+<style>
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial;
+    }
+    body{
+        height: 100vh;
+        background: linear-gradient(180deg , blue, red);
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+    .container{
+        width: 360px;
+        background-color: white;
+        border-radius: 20PX;
+        overflow: hidden;
+        
+
+    }
+    .box{
+        display: flex;
+        width: 200%;
+        transition: 0.5s;
+    }
+    form{
+        padding: 40px;
+        width: 50%;
+    }
+    .box.active {
+     transform: translateX(-50%);
+}
+    h2{
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+input:focus{
+    border-color: #764ba2;
+    outline: none;
+}
+button {
+  width: 100%;
+  padding: 10px;
+  background: #764ba2;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+ 
+}
+p{
+    text-align: center;
+    margin-top: 15px;
+
+}
+span{
+    cursor: pointer;
+    font-weight: bolder;
+    color: #764ba2;
+}
+</style>

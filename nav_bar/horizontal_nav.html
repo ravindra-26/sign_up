@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <ul class="navbar" >
+            <li><a href="">home</a></li>
+            <li><a href="">about</a></li>
+            <li class="dropdown">
+                <a href="">services</a>
+                <ul class="drop-menu">
+                    <li><a href="">html</a></li>
+                    <li><a href="">css</a></li>
+                    <li><a href="">python</a></li>
+                    <li><a href="">javascript</a></li>
+                </ul>
+            </li>
+            <li class="contacts">
+                <a href="">contacts</a>
+                <ul class="contact-list">
+                    <li class="imgbar">
+                        <a href="">ravi-7995709151</a>
+                        <ul class="img-list">
+                            <li><img src="mypic.jpeg" alt="">M.Ravindra <br> id:543204 <br> V N Softverg</li>
+                            
+                        </ul>
+                    </li>
+                    <li><a href="">deepak-7995709151</a></li>
+                    <li><a href="">ram-7995709151</a></li>
+                  
+                </ul>
+            </li>
+        </ul>
+
+   
+</body>
+</html>
+<style>
+    .navbar {
+        background: #333;
+        list-style: none;
+        display:flex;
+    }
+    .navbar li{
+        position: relative;
+    }
+    .navbar li a{
+      display: block;
+      padding: 15px 20px;
+      color: red;
+      text-decoration: none;
+    }
+    .navbar li a:hover{
+        background: #555;
+    }
+  .drop-menu{
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  background: #444;
+  min-width: 150px;
+}
+.drop-menu li a{
+    padding: 15px;
+}
+.dropdown:hover .drop-menu{
+    display: block;
+}
+.contact-list{
+    display: none;
+    position:absolute;
+    min-width: 170px;
+    background: #444;
+    top: 50px;
+}
+.contact-list li{
+    padding: 0px;
+}
+.contacts:hover .contact-list{
+    display: block;
+}
+.img-list{
+    display: none;
+    position: absolute;
+    left: 180px;
+    bottom: -20px;
+    min-width: 100px;
+    background: #f57b7b;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(253, 3, 3, 0.833);
+    text-shadow: 1px 1px rgb(255, 6, 6);
+    
+}
+.img-list li{
+    list-style: none;
+    color: rgb(254, 252, 252);
+    font-weight: bolder;
+    
+   
+}
+.img-list img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+.imgbar:hover .img-list{
+    display: block;
+}
+
+    
+</style>
